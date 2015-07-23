@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0 rc3"
+
+    defaultConfig {
+        applicationId "com.yifan.wzxy.educationim"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.0'
+
+    compile "org.jxmpp:jxmpp-core:0.5.0-alpha3"
+    compile "org.jxmpp:jxmpp-jid:0.5.0-alpha3"
+    compile "org.jxmpp:jxmpp-util-cache:0.5.0-alpha3"
+    compile "org.igniterealtime.smack:smack-android:4.1.0"
+    compile "org.igniterealtime.smack:smack-android-extensions:4.1.0"
+    compile "org.igniterealtime.smack:smack-compression-jzlib:4.1.0"
+    compile "org.igniterealtime.smack:smack-core:4.1.0"
+    compile "org.igniterealtime.smack:smack-debug:4.1.0"
+    compile "org.igniterealtime.smack:smack-debug-slf4j:4.1.0"
+    compile "org.igniterealtime.smack:smack-experimental:4.1.0"
+    compile "org.igniterealtime.smack:smack-extensions:4.1.0"
+    compile "org.igniterealtime.smack:smack-im:4.1.0"
+    compile "org.igniterealtime.smack:smack-legacy:4.1.0"
+    compile "org.igniterealtime.smack:smack-resolver-dnsjava:4.1.0"
+    compile "org.igniterealtime.smack:smack-resolver-minidns:4.1.0"
+    compile "org.igniterealtime.smack:smack-sasl-provided:4.1.0"
+    compile "org.igniterealtime.smack:smack-tcp:4.1.0"
+}
