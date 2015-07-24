@@ -37,14 +37,15 @@ import java.util.List;
 
 
 /**
- * A login screen that offers login via email/password.
+ * µÇÂ¼½çÃæ
+ * Created by yifan on 2015/7/23.
  */
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private final static String SERVICE_NAME = "127.0.0.1";
     private final static String SERVICE_HOST = "192.9.5.199";
     private final static int SERVICE_PORT = 5222;
-    private XMPPTCPConnection connection;
+    public static XMPPTCPConnection connection;
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -277,13 +278,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 connection = getConnection();
                 connection.connect();
                 connection.login(mUsername, mPassword);
-//                Roster roster = Roster.getInstanceFor(connection);
-//                Collection<RosterEntry> entries = roster.getEntries();
-//
-//                System.out.println("-----------------------" + entries.size());
-//                for (RosterEntry entry : entries) {
-//                    System.out.println("-----------------------" + entry);
-//                }
             } catch (SmackException e) {
                 e.printStackTrace();
                 return false;

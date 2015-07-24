@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="send_message">发送消息</string>
+    <string name="message_text">输入要发送的内容</string>
+    <string name="sender_text">输入接收者的地址</string>
 </resources>
